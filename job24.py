@@ -10,7 +10,7 @@ def replace(x, stars):
 
     if str_2[x] == "*" and stars == 0:
         stars += 1
-    elif str_1[x] != str_2[x] and stars != 0:
+    elif str_1[x] == str_2[x] and stars != 0:
         stars -= 1
 
     if x == len(str_2)-1:
@@ -22,7 +22,7 @@ def replace(x, stars):
         else:
             return print("mot erroné")
     else:
-        print("x :", x)
+      #  print("x :", x)
         return replace(x+1, stars)
 
 replace(0, stars)
